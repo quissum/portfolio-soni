@@ -12,12 +12,13 @@
   "license": "ISC",
   "devDependencies": {
     "@snowpack/plugin-optimize": "^0.2.13",
-    "@snowpack/plugin-sass": "^1.4.0",
-    "snowpack": "^3.8.8",
     "@snowpack/plugin-postcss": "^1.4.3",
+    "@snowpack/plugin-sass": "^1.4.0",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.15",
     "postcss": "^8.4.5",
-    "postcss-preset-env": "^7.2.3"
+    "postcss-preset-env": "^7.2.3",
+    "postcss-sorting": "^7.0.1",
+    "snowpack": "^3.8.8"
   }
 }
