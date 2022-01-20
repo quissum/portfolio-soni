@@ -1,0 +1,156 @@
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  section,
+  header,
+  footer {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .header100 {
+    text-align: center;
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  .img-content {
+    padding: 50px 0 50px;
+    clip-path: none;
+  }
+
+  .card {
+    margin-bottom: 50px;
+    &__flex {
+      flex-wrap: wrap;
+    }
+    &__content {
+      flex: 0 0 100%;
+    }
+
+    &__image {
+      flex: 0 0 100%;
+    }
+  }
+
+  .contact {
+    padding: 50px 0;
+    clip-path: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .img-content {
+    &__flexbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__image {
+      flex: 0 0 100%;
+      margin-bottom: 50px;
+    }
+
+    &__content {
+      flex: 0 0 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .header100 {
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .img-content {
+    &__btn {
+      font-size: 16px;
+    }
+  }
+
+  .card {
+    margin-bottom: 40px;
+
+    button {
+      font-size: 16px;
+    }
+  }
+
+  .footer {
+    a {
+      padding: 0;
+    }
+  }
+
+  .contact {
+    a {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  header,
+  section,
+  footer {
+    padding: 30px 0;
+  }
+
+  .header100 {
+    h1 {
+      font-size: 28px;
+    }
+
+    &__btn {
+      font-size: 16px;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    &__content {
+      text-align: center;
+    }
+
+    &__code-btn {
+      margin-top: 15px;
+    }
+    &__content {
+      padding: 5px;
+    }
+
+    &__image {
+      padding: 5px;
+    }
+  }
+}
