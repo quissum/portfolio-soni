@@ -1,5 +1,5 @@
 @import './scss/zeroing';
-@import './css/fontello.css';
+@import './scss/font';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
@@ -13,6 +13,18 @@ $dark: #272341;
   color: transparent;
 }
 
+@mixin beforbtn {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  z-index: -1;
+  transition: all 0.1s ease-out;
+}
+
 //global======
 html {
   scroll-behavior: smooth;
@@ -23,11 +35,13 @@ body {
   line-height: 1.5;
   color: $dark;
   background-color: $light;
+  overflow-x: hidden;
 }
 
 button {
   font-weight: 700;
   padding: 8px 16px;
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -36,6 +50,21 @@ button {
   border: 2px solid transparent;
   border-image: linear-gradient(135deg, #134e5e, #71b280);
   border-image-slice: 1;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.22s ease-out;
+
+  &::before {
+    @include beforbtn();
+    background-image: linear-gradient(135deg, #134e5e, #71b280);
+  }
+
+  &:hover {
+    background-image: linear-gradient($light, $light);
+  }
+  &:hover::before {
+    transform: translateX(0%);
+  }
 }
 
 .container {
@@ -69,6 +98,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 
   h1 {
     font-size: 56px;
@@ -83,6 +113,12 @@ img {
     @extend button;
     font-size: 24px;
   }
+}
+
+.ex {
+  height: 50px;
+  width: 100px;
+  background: red;
 }
 
 .img-content {
@@ -115,6 +151,21 @@ img {
 
   &__btn {
     border: 2px solid $light;
+    transition: all 0.1s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      @include beforbtn();
+      background: $light;
+    }
+    &:hover {
+      color: #71b280;
+    }
+    &:hover::before {
+      transform: translateX(0%);
+    }
   }
 }
 
@@ -145,7 +196,13 @@ img {
   }
 
   &__code-btn {
+    @include textgradient();
     border-image: none;
+    transition: all 0.22s ease-out;
+
+    &:hover {
+      transform: translateX(5px);
+    }
   }
 
   p {
@@ -168,6 +225,20 @@ img {
     border: 2px solid $light;
     font-size: 24px;
     padding: 4px 16px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      @include beforbtn();
+      background: $light;
+    }
+    &:hover {
+      color: #71b280;
+    }
+    &:hover::before {
+      transform: translateX(0%);
+    }
   }
 }
 
@@ -188,9 +259,14 @@ img {
   a {
     @extend button;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 10px;
+    padding: 0;
     width: max-content;
     font-weight: 400;
+    transition: all 0.22s ease;
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 
   .social-links {
@@ -206,3 +282,4 @@ img {
 }
 
 @import './scss/media';
+@import './scss/animate';
