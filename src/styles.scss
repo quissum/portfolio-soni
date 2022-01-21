@@ -9,8 +9,7 @@ $dark: #272341;
 
 @mixin textgradient {
   background-image: linear-gradient(135deg, #134e5e, #71b280);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
   color: transparent;
 }
 

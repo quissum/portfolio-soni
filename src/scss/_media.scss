@@ -75,6 +75,11 @@
     h1 {
       font-size: 30px;
     }
+    span {
+      background-image: none;
+      background-clip: none;
+      color: #71b280;
+    }
   }
 
   button {
@@ -95,11 +100,22 @@
     }
   }
 
+  .btn-gradient {
+    background-image: none;
+    background-clip: none;
+    border-color: #71b280;
+    color: #71b280;
+  }
+
   .card {
     margin-bottom: 40px;
 
     button {
       font-size: 16px;
+    }
+
+    &__code-btn {
+      border-color: transparent;
     }
   }
 
@@ -113,11 +129,6 @@
     a {
       max-width: 100%;
     }
-  }
-
-  .btn-gradient {
-    border-color: #71b280;
-    color: #71b280;
   }
 }
 
